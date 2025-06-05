@@ -1,25 +1,69 @@
+:root {
+  /* 🎯 Cores Principais */
+  --color-green-felt: #0b3d2e; /* Fundo principal do site (mesa de jogo) */
+  --color-ivory-soft: #f3e6c2; /* Textos principais, fundo das cartas */
+  --color-red-card: #c0392b; /* Botões de ação, naipes vermelhos */
+  --color-black-matte: #1c1c1c; /* Texto escuro, naipes pretos */
+  --color-gray-graphite: #444444; /* Texto secundário, descrições, footer */
+
+  /* ✳️ Cores de Acento e Estado */
+  --color-gold-casino: #d4af37; /* Destaques, ícones, efeitos hover */
+  --color-green-bet: #27ae60; /* Status positivo (ganhou, aposta OK) */
+  --color-red-loss: #e74c3c; /* Mensagens de erro, derrota */
+  --color-blue-info: #2980b9; /* Informações, links, botões neutros */
+
+  /* 🧱 Cores de Fundo e Superfície */
+  --color-dark-surface: #1e1e1e; /* Fundo alternativo, seção de regras */
+  --color-light-gray: #d5d5d5; /* Borda das cartas, separadores visuais */
+  --color-green-table: #145a32; /* Área de jogo (mesa onde as cartas aparecem) */
+
+  /* ♠♥♣♦ Cores dos Naipes das Cartas */
+  --suit-spade: #1c1c1c; /* Naipe Espadas (preto) */
+  --suit-heart: #c0392b; /* Naipe Copas (vermelho) */
+  --suit-club: #1c1c1c; /* Naipe Paus (preto) */
+  --suit-diamond: #c0392b; /* Naipe Ouros (vermelho) */
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
-}
-
-.background {
-  z-index: -1;
-  position: fixed;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background-color: var(--color-green-felt);
 }
 
 h1 {
   margin: 0;
 }
 
-.header-content {
-  color: white;
+header {
   display: flex;
-  border: 4px solid;
+  justify-content: space-between;
+  margin: 30px 20px;
+}
+
+header h2 {
+  margin: 0;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav ul {
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  padding-right: 50px;
+  list-style: none;
+}
+
+.main-nav ul li {
+  font-size: 1.2rem;
+  color: var(--color-ivory-soft);
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: var(--color-ivory-soft);
+  transition: color 0.3s ease;
 }

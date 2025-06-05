@@ -13,30 +13,30 @@
     />
   </head>
   <body>
-    <img
-      src="src/assets/21-background.jpg"
-      alt="Background Image"
-      class="background"
-    />
-
     <header>
-      <div class="header-content">
-        <h1>21 - Blackjack</h1>
-      </div>
+      <h1>21 - Blackjack</h1>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#rules">Regras</a></li>
+          <li><a href="about.html">Sobre</a></li>
+        </ul>
+        <h2>Jogar</h2>
+      </nav>
     </header>
 
     <main>
-      <div class="main-content">
-        <p>
-          O objetivo do jogo é chegar o mais próximo possível de 21 sem
-          ultrapassar esse valor.
-        </p>
-        <p>
-          O jogo é jogado com um baralho padrão de 52 cartas. As cartas de 2 a
-          10 valem seu valor nominal, as cartas J, Q e K valem 10 pontos, e o Ás
-          pode valer 1 ou 11 pontos, dependendo da escolha do jogador.
-        </p>
-
+      <p>
+        O objetivo do jogo é chegar o mais próximo possível de 21 sem
+        ultrapassar esse valor.
+      </p>
+      <p>
+        O jogo é jogado com um baralho padrão de 52 cartas. As cartas de 2 a 10
+        valem seu valor nominal, as cartas J, Q e K valem 10 pontos, e o Ás pode
+        valer 1 ou 11 pontos, dependendo da escolha do jogador.
+      </p>
+      <div id="rules">
         <h2>Regras do Jogo</h2>
         <ul>
           <li>O jogador recebe duas cartas iniciais.</li>
@@ -61,13 +61,13 @@
             21.
           </li>
         </ul>
-
-        <h2>Instruções</h2>
-        <p>Clique no botão abaixo para iniciar o jogo:</p>
-        <button onclick="startGame()">Iniciar Jogo</button>
-
-        <script src="src/script.js"></script>
       </div>
+
+      <h2>Instruções</h2>
+      <p>Clique no botão abaixo para iniciar o jogo:</p>
+      <button onclick="startGame()">Iniciar Jogo</button>
+
+      <script src="src/script.js"></script>
     </main>
   </body>
 </html>
