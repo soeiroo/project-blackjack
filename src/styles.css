@@ -1,52 +1,77 @@
 :root {
-  /* 🎯 Cores Principais */
-  --color-green-felt: #0b3d2e; /* Fundo principal do site (mesa de jogo) */
-  --color-ivory-soft: #f3e6c2; /* Textos principais, fundo das cartas */
-  --color-red-card: #c0392b; /* Botões de ação, naipes vermelhos */
-  --color-black-matte: #1c1c1c; /* Texto escuro, naipes pretos */
-  --color-gray-graphite: #444444; /* Texto secundário, descrições, footer */
+  /* 🌌 Fundos */
+  --bg-main: #121212; /* Fundo principal do site (body) */
+  --bg-table: #1e3d32; /* Área da mesa de jogo */
+  --bg-surface: #1a1a1a; /* Superfícies secundárias (cards, seções) */
+  --bg-nav: #1a1a1a;
 
-  /* ✳️ Cores de Acento e Estado */
-  --color-gold-casino: #d4af37; /* Destaques, ícones, efeitos hover */
-  --color-green-bet: #27ae60; /* Status positivo (ganhou, aposta OK) */
-  --color-red-loss: #e74c3c; /* Mensagens de erro, derrota */
-  --color-blue-info: #2980b9; /* Informações, links, botões neutros */
+  /* ✏️ Texto */
+  --text-main: #fdfdfd; /* Texto principal */
+  --text-secondary: #cccccc; /* Texto de apoio, descrições */
+  --text-muted: #999999; /* Texto desativado ou menos importante */
+  --text-heading: #ffffff; /* Títulos e headings */
 
-  /* 🧱 Cores de Fundo e Superfície */
-  --color-dark-surface: #1e1e1e; /* Fundo alternativo, seção de regras */
-  --color-light-gray: #d5d5d5; /* Borda das cartas, separadores visuais */
-  --color-green-table: #145a32; /* Área de jogo (mesa onde as cartas aparecem) */
+  /* 🎯 Destaques e Acentos */
+  --highlight: #ffd700; /* Links, hover no menu, elementos em foco */
+  --accent-gold: #d4af37; /* Dourado para efeitos elegantes */
+  --accent-blue: #2980b9; /* Informações ou elementos neutros */
 
-  /* ♠♥♣♦ Cores dos Naipes das Cartas */
-  --suit-spade: #1c1c1c; /* Naipe Espadas (preto) */
-  --suit-heart: #c0392b; /* Naipe Copas (vermelho) */
-  --suit-club: #1c1c1c; /* Naipe Paus (preto) */
-  --suit-diamond: #c0392b; /* Naipe Ouros (vermelho) */
+  /* 🟥 Botões e Estados */
+  --btn-main: #c0392b; /* Botão principal (ex: Iniciar Jogo) */
+  --btn-hover: #a93226; /* Hover do botão */
+  --btn-success: #27ae60; /* Confirmações, vitórias */
+  --btn-error: #e74c3c; /* Erros, derrotas */
+
+  /* 🃏 Cartas e Bordas */
+  --card-bg: #f3e6c2; /* Fundo de carta clara */
+  --card-border: #e0e0e0; /* Borda das cartas */
+  --suit-red: #c0392b; /* Naipes vermelhos (♥ ♦) */
+  --suit-black: #1c1c1c; /* Naipes pretos (♠ ♣) */
+
+  /* 🔳 Divisores e Linhas */
+  --divider: #333333; /* Linhas, separadores visuais */
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
-  background-color: var(--color-green-felt);
+  background-color: var(--bg-main);
 }
 
-h1 {
+header h1,
+header h2 {
   margin: 0;
+  color: var(--text-heading);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   margin: 30px 20px;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+  height: auto;
 }
 
 header h2 {
-  margin: 0;
+  background-color: var(--btn-main);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 2rem;
 }
 
 .main-nav {
   display: flex;
+  background-color: var(--bg-nav);
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 .main-nav ul {
@@ -66,4 +91,17 @@ header h2 {
   text-decoration: none;
   color: var(--color-ivory-soft);
   transition: color 0.3s ease;
+}
+
+.rules {
+  background-color: var(--bg-surface);
+  margin: 10px;
+  border-radius: 12px;
+  padding: 10px;
+  color: var(--text-secondary);
+}
+
+.rules h2 {
+  color: var(--text-main);
+  margin-bottom: 10px;
 }
