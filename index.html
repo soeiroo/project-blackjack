@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21 - Blackjack</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img
+      src="src/assets/21-background.jpg"
+      alt="Background Image"
+      class="background"
+    />
+
+    <header>
+      <div class="header-content">
+        <h1>21 - Blackjack</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <p>
+          O objetivo do jogo é chegar o mais próximo possível de 21 sem
+          ultrapassar esse valor.
+        </p>
+        <p>
+          O jogo é jogado com um baralho padrão de 52 cartas. As cartas de 2 a
+          10 valem seu valor nominal, as cartas J, Q e K valem 10 pontos, e o Ás
+          pode valer 1 ou 11 pontos, dependendo da escolha do jogador.
+        </p>
+
+        <h2>Regras do Jogo</h2>
+        <ul>
+          <li>O jogador recebe duas cartas iniciais.</li>
+          <li>
+            O dealer também recebe duas cartas, uma delas virada para baixo.
+          </li>
+          <li>
+            O jogador pode optar por "bater" (pedir mais uma carta) ou "ficar"
+            (manter as cartas atuais).
+          </li>
+          <li>
+            O jogo continua até que o jogador decida ficar ou ultrapasse 21
+            pontos.
+          </li>
+          <li>Se o jogador ultrapassar 21, ele perde automaticamente.</li>
+          <li>
+            Após o jogador ficar, o dealer revela sua carta oculta e joga de
+            acordo com regras específicas.
+          </li>
+          <li>
+            O vencedor é aquele que tiver a pontuação mais alta sem ultrapassar
+            21.
+          </li>
+        </ul>
+
+        <h2>Instruções</h2>
+        <p>Clique no botão abaixo para iniciar o jogo:</p>
+        <button onclick="startGame()">Iniciar Jogo</button>
+
+        <script src="src/script.js"></script>
+      </div>
+    </main>
+  </body>
+</html>
