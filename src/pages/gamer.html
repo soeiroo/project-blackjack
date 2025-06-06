@@ -3,14 +3,139 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo de Cartas</title>
     <link rel="stylesheet" href="gamer.css" />
   </head>
 
   <body>
+    <!-- SVGs decorativos de fundo -->
+    <div class="bg-card bg-card-top-left">
+      <svg width="60" height="90" viewBox="0 0 60 90">
+        <rect
+          width="60"
+          height="90"
+          rx="8"
+          fill="#fff"
+          stroke="#222"
+          stroke-width="2"
+        />
+        <text x="10" y="25" font-size="20" font-family="serif" fill="#c00">
+          A
+        </text>
+        <text
+          x="45"
+          y="85"
+          font-size="20"
+          font-family="serif"
+          fill="#c00"
+          transform="rotate(180 45 85)"
+        >
+          A
+        </text>
+        <text
+          x="30"
+          y="50"
+          font-size="32"
+          font-family="serif"
+          fill="#c00"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          ♥
+        </text>
+      </svg>
+    </div>
+    <div class="bg-card bg-card-bottom-right">
+      <svg width="60" height="90" viewBox="0 0 60 90">
+        <rect
+          width="60"
+          height="90"
+          rx="8"
+          fill="#fff"
+          stroke="#222"
+          stroke-width="2"
+        />
+        <text x="10" y="25" font-size="20" font-family="serif" fill="#000">
+          K
+        </text>
+        <text
+          x="45"
+          y="85"
+          font-size="20"
+          font-family="serif"
+          fill="#000"
+          transform="rotate(180 45 85)"
+        >
+          K
+        </text>
+        <text
+          x="30"
+          y="50"
+          font-size="32"
+          font-family="serif"
+          fill="#000"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          ♠
+        </text>
+      </svg>
+    </div>
     <header>
-      <h1>Black Jack</h1>
+      <h1 class="titulo-blackjack">
+        Black Jack
+        <span class="titulo-svg-cartas">
+          <svg width="36" height="54" viewBox="0 0 60 90">
+            <rect
+              width="60"
+              height="90"
+              rx="8"
+              fill="#fff"
+              stroke="#222"
+              stroke-width="2"
+            />
+            <text x="10" y="25" font-size="18" font-family="serif" fill="#c00">
+              A
+            </text>
+            <text
+              x="30"
+              y="50"
+              font-size="28"
+              font-family="serif"
+              fill="#c00"
+              text-anchor="middle"
+              alignment-baseline="middle"
+            >
+              ♥
+            </text>
+          </svg>
+          <svg width="36" height="54" viewBox="0 0 60 90">
+            <rect
+              width="60"
+              height="90"
+              rx="8"
+              fill="#fff"
+              stroke="#222"
+              stroke-width="2"
+            />
+            <text x="10" y="25" font-size="18" font-family="serif" fill="#000">
+              K
+            </text>
+            <text
+              x="30"
+              y="50"
+              font-size="28"
+              font-family="serif"
+              fill="#000"
+              text-anchor="middle"
+              alignment-baseline="middle"
+            >
+              ♠
+            </text>
+          </svg>
+        </span>
+      </h1>
     </header>
 
     <main>
@@ -29,19 +154,17 @@
           <p>Pontuação: <span id="pontuacao-jogador-2">0</span></p>
         </article>
       </div>
-      
+
       <button class="comprar-carta">Comprar Carta</button>
 
       <button class="passar-vez">Passar a vez</button>
-      
+
       <button onclick="startGame()">Reiniciar</button>
 
       <h2 id="mensagem-turno"></h2>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <script src="../script.js"></script>
   </body>
