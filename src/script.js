@@ -91,7 +91,7 @@ function mostrarCartas(mao, elemento) {
     const valor = carta.valor.toLowerCase();
     const tipo = carta.tipo.toLowerCase();
 
-    img.src = `./assets/images/${valor}-${tipo}.png`;
+    img.src = `../assets/images/${valor}-${tipo}.png`;
     img.alt = `${carta.valor} de ${carta.tipo}`;
     img.classList.add("imagem-carta");
 
