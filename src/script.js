@@ -22,7 +22,21 @@ function Carta(tipo, valor) {
 
 function criarBaralho() {
   let tipos = ["espadas", "copas", "ouros", "paus"];
-  let valores = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  let valores = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
 
   baralho = [];
 
@@ -49,7 +63,10 @@ function valorPontos(valor) {
 }
 
 function calcularPontos(jogador) {
-  return jogador.mao.reduce((total, carta) => total + valorPontos(carta.valor), 0);
+  return jogador.mao.reduce(
+    (total, carta) => total + valorPontos(carta.valor),
+    0
+  );
 }
 
 function mostrarPontos(pontos, elemento) {
@@ -68,8 +85,17 @@ function mostrarCartas(mao, elemento) {
   for (let i = 0; i < mao.length; i++) {
     const carta = mao[i];
     const li = document.createElement("li");
-    li.textContent = `${carta.valor}:${carta.tipo}`;
     li.classList.add("carta");
+
+    const img = document.createElement("img");
+    const valor = carta.valor.toLowerCase();
+    const tipo = carta.tipo.toLowerCase();
+
+    img.src = `./assets/images/${valor}-${tipo}.png`;
+    img.alt = `${carta.valor} de ${carta.tipo}`;
+    img.classList.add("imagem-carta");
+
+    li.appendChild(img);
 
     const rotacao = (i - Math.floor(mao.length / 2)) * 6;
     li.style.setProperty("--rotacao", `${rotacao}deg`);
@@ -92,7 +118,7 @@ function atualizarTurno() {
   if (!mensagemTurno) return;
 
   if (jogador1.passou && jogador2.passou) return;
-  
+
   mensagemTurno.textContent = `Vez de: ${jogadores[turnoAtual].nome}`;
 }
 
