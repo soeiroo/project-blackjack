@@ -91,7 +91,7 @@ function mostrarCartas(mao, elemento) {
     const valor = carta.valor.toLowerCase();
     const tipo = carta.tipo.toLowerCase();
 
-    img.src = `../assets/images/${valor}-${tipo}.png`;
+    img.src = `../assets/images/cartas/${valor}-${tipo}.png`;
     img.alt = `${carta.valor} de ${carta.tipo}`;
     img.classList.add("imagem-carta");
 
@@ -219,3 +219,19 @@ btnPassar.addEventListener("click", () => {
 });
 
 startGame();
+
+function mostrarRegras() {
+  const header = document.getElementById("header");
+  const rules = document.getElementById("rules");
+  if (!header || !rules) return;
+  header.classList.add("topo");
+  rules.classList.add("visivel");
+}
+
+function mostrarInicio() {
+  const header = document.getElementById("header");
+  const rules = document.getElementById("rules");
+  if (!header || !rules) return;
+  header.classList.remove("topo");
+  rules.classList.remove("visivel");
+}

@@ -13,16 +13,169 @@
     />
   </head>
   <body>
-    <header>
-      <img src="src/assets/blackjack-logo.png" alt="Logo do Jogo 21" />
+    <!-- SVGs decorativos de fundo -->
+    <div class="bg-card bg-card-top-left">
+      <svg width="70" height="100" viewBox="0 0 60 90">
+        <rect
+          width="60"
+          height="90"
+          rx="8"
+          fill="#fff"
+          stroke="#222"
+          stroke-width="2"
+        />
+        <text x="10" y="25" font-size="20" font-family="serif" fill="#c00">
+          A
+        </text>
+        <text
+          x="45"
+          y="85"
+          font-size="20"
+          font-family="serif"
+          fill="#c00"
+          transform="rotate(180 45 85)"
+        >
+          A
+        </text>
+        <text
+          x="30"
+          y="50"
+          font-size="32"
+          font-family="serif"
+          fill="#c00"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          ♥
+        </text>
+      </svg>
+    </div>
+    <div class="bg-card bg-card-bottom-left">
+      <svg width="50" height="75" viewBox="0 0 60 90">
+        <rect
+          width="60"
+          height="90"
+          rx="8"
+          fill="#fff"
+          stroke="#222"
+          stroke-width="2"
+        />
+        <text x="10" y="25" font-size="20" font-family="serif" fill="#000">
+          Q
+        </text>
+        <text
+          x="45"
+          y="85"
+          font-size="20"
+          font-family="serif"
+          fill="#000"
+          transform="rotate(180 45 85)"
+        >
+          Q
+        </text>
+        <text
+          x="30"
+          y="50"
+          font-size="32"
+          font-family="serif"
+          fill="#000"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          ♣
+        </text>
+      </svg>
+    </div>
+    <div class="bg-card bg-card-center-left">
+      <svg width="60" height="90" viewBox="0 0 60 90">
+        <rect
+          width="60"
+          height="90"
+          rx="8"
+          fill="#fff"
+          stroke="#222"
+          stroke-width="2"
+        />
+        <text x="10" y="25" font-size="20" font-family="serif" fill="#c00">
+          J
+        </text>
+        <text
+          x="45"
+          y="85"
+          font-size="20"
+          font-family="serif"
+          fill="#c00"
+          transform="rotate(180 45 85)"
+        >
+          J
+        </text>
+        <text
+          x="30"
+          y="50"
+          font-size="32"
+          font-family="serif"
+          fill="#c00"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          ♦
+        </text>
+      </svg>
+    </div>
+    <div class="bg-card bg-card-center">
+      <svg width="80" height="120" viewBox="0 0 60 90">
+        <rect
+          width="60"
+          height="90"
+          rx="10"
+          fill="#fff"
+          stroke="#222"
+          stroke-width="2"
+        />
+        <text x="10" y="25" font-size="22" font-family="serif" fill="#000">
+          A
+        </text>
+        <text
+          x="45"
+          y="85"
+          font-size="22"
+          font-family="serif"
+          fill="#000"
+          transform="rotate(180 45 85)"
+        >
+          A
+        </text>
+        <text
+          x="30"
+          y="50"
+          font-size="38"
+          font-family="serif"
+          fill="#000"
+          text-anchor="middle"
+          alignment-baseline="middle"
+        >
+          ♣
+        </text>
+      </svg>
+    </div>
+
+    <header id="header">
+      <img src="src/assets/images/blackjack-logo.png" alt="Logo do Jogo 21" />
 
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="#rules">Regras</a></li>
-          <li><a href="about.html">Sobre</a></li>
+          <li>
+            <a href="#" onclick="mostrarInicio();" class="botao-secundario"
+              >Início</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="mostrarRegras();" class="botao-secundario"
+              >Regras</a
+            >
+          </li>
         </ul>
-        <a href="src/pages/gamer.html"><h2>Jogar</h2></a>
+        <a href="src/pages/gamer.html"><span class="btn-jogar">Jogar</span></a>
       </nav>
     </header>
 
@@ -62,18 +215,7 @@
           </li>
         </ul>
       </div>
-
-      <h2>Instruções</h2>
-
-      <p>Clique no botão abaixo para iniciar o jogo:</p>
-
-      <a href="src/pages/gamer.html">Iniciar Jogo</a>
-
-      <!-- <ul class="cartas"></ul>
-      <ul class="mao-jogador-1"></ul>
-      <button class="comprar-carta">comprar cartas</button> -->
-
-      <script src="src/script.js"></script>
     </main>
+    <script src="src/script.js" defer></script>
   </body>
 </html>
