@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Jogo de Cartas</title>
+    <link rel="stylesheet" href="gamer.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Black Jack</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <article class="jogador" id="jogador1">
+          <h2>Jogador 1</h2>
+          <ul class="mao-jogador-1 cartas"></ul>
+
+          <p>Pontuação: <span id="pontuacao-jogador-1">0</span></p>
+        </article>
+
+        <article class="jogador" id="jogador2">
+          <h2>Jogador 2</h2>
+          <ul class="mao-jogador-2 cartas"></ul>
+
+          <p>Pontuação: <span id="pontuacao-jogador-2">0</span></p>
+        </article>
+      </div>
+      
+      <button class="comprar-carta">Comprar Carta</button>
+
+      <button class="passar-vez">Passar a vez</button>
+      
+      <button onclick="startGame()">Reiniciar</button>
+
+      <h2 id="mensagem-turno"></h2>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
