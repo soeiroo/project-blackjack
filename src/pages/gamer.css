@@ -103,7 +103,8 @@ main {
   transition: background 0.3s, color 0.3s;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   background: #ff2d2d;
   color: #fff;
 }
@@ -126,6 +127,55 @@ button:hover, button:focus {
   bottom: 30px;
   right: 30px;
   transform: rotate(18deg);
+}
+
+.bg-card-bottom-left {
+  bottom: 40px;
+  left: 40px;
+  transform: rotate(7deg);
+}
+
+.bg-card-center-left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-8deg);
+}
+
+.bg-card-center-right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(12deg);
+}
+
+.bg-card-center {
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  opacity: 0.09;
+}
+
+.bg-card-top-center {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(6deg);
+}
+
+.bg-card-middle-right {
+  top: 35%;
+  right: 60px;
+  transform: rotate(-10deg);
+}
+
+.bg-card-middle-left {
+  top: 35%;
+  left: 60px;
+  transform: rotate(14deg);
+}
+
+.bg-card-bottom-center {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-8deg);
 }
 
 .titulo-blackjack {
@@ -161,7 +211,6 @@ button:hover, button:focus {
   background-color: #ccc;
   color: #888;
 }
-
 
 /* ------------------------------------------------ */
 
