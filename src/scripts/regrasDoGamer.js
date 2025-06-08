@@ -34,11 +34,19 @@ function valorPontos(valor) {
 }
 
 function calcularPontos(mao) {
-  return mao.reduce((total, carta) => total + valorPontos(carta.valor), 0);
+  let pontos = mao.reduce((total, carta) => total + valorPontos(carta.valor), 0);
+
+  for(let carta of mao) {
+    if(carta.valor === "A" && pontos + 10 <= 21) {
+      pontos += 10;
+    }
+  }
+
+  return pontos;
 }
 
 function pegarCarta(jogador) {
-  if (baralho.length === 0) {
+  if(baralho.length === 0) {
     alert("O baralho acabou!");
 
     return;
@@ -56,11 +64,13 @@ function startGame(jogador1, jogador2) {
 
     jogador1.mao = [];
     jogador2.mao = [];
+
     jogador1.passou = false;
     jogador2.passou = false;
 
     pegarCarta(jogador1);
     pegarCarta(jogador2);
+
     pegarCarta(jogador1);
     pegarCarta(jogador2);
 }

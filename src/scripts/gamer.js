@@ -2,6 +2,7 @@ import { startGame, pegarCarta, calcularPontos, verificarFimDeJogo } from "./reg
 
 const jogador1 = { nome: "Jogador 1", mao: [] };
 const jogador2 = { nome: "Jogador 2", mao: [] };
+
 const jogadores = [jogador1, jogador2];
 
 let turnoAtual = 0;
@@ -113,6 +114,8 @@ btnComprar.addEventListener("click", () => {
     
     if (pontos >= 21) {
       jogador.passou = true;
+
+      btnPassar.innerHTML = "Resultado";
       
       encerrarJogo(verificarFimDeJogo(jogador1, jogador2));
       
