@@ -39,6 +39,10 @@ main {
   width: 280px;
   min-height: 200px;
   box-shadow: 0 0 10px #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .jogador h2 {
