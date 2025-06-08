@@ -134,6 +134,7 @@ btnPassar.addEventListener("click", () => {
   if (!jogadores[1 - turnoAtual].passou) {
     turnoAtual = 1 - turnoAtual;
     atualizarInterface(jogador1, jogador2, turnoAtual);
+    btnPassar.innerHTML = "Resultado";
     atualizarTurno();
   }
 });
@@ -153,6 +154,8 @@ btnReiniciar.addEventListener("click", () => {
 
     btnComprar.disabled = false;
     btnPassar.disabled = false;
+
+    btnPassar.innerHTML = "Passar a vez";
 
     btnComprar.classList.remove("btn-desabilidado");
     btnPassar.classList.remove("btn-desabilidado");
